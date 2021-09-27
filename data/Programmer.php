@@ -2,9 +2,10 @@
 
 class Programmer
 {
+
 	public string $name;
 
-	public function __constructor(string $name)
+	public function __construct(string $name)
 	{
 		$this->name = $name;
 	}
@@ -24,4 +25,9 @@ class FrontendProgrammer extends Programmer
 class Company
 {
 	public Programmer $programmer;
+}
+
+function say_hello_programmer(Programmer $programmer)
+{
+	echo "Hello Programmer $programmer->name" . PHP_EOL;
 }
